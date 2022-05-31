@@ -6,13 +6,13 @@ import org.junit.jupiter.api.assertThrows
 internal class OrganisasjonsnummerValidatorTest {
 
     @Test
-    fun `Skal godta gyldig organisasjonsnummer`(){
+    fun `Skal godta gyldig organisasjonsnummer`() {
         OrganisasjonsnummerValidator(TestData.validOrgNr)
     }
 
     @Test
-    fun `Skal ikke godta ugyldig organisasjonsnummer`(){
-        assertThrows <IllegalArgumentException>{
+    fun `Skal ikke godta ugyldig organisasjonsnummer`() {
+        assertThrows <IllegalArgumentException> {
             OrganisasjonsnummerValidator(TestData.notValidOrgNr)
         }
     }
