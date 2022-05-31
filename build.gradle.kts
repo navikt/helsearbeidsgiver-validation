@@ -16,7 +16,7 @@ plugins {
 }
 
 group = "no.nav.helsearbeidsgiver"
-version = "0.1.0"
+version = "0.1.1"
 
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "11"
@@ -57,11 +57,6 @@ publishing {
 }
 
 dependencies {
+    implementation("org.junit.jupiter:junit-jupiter:5.8.1")
     testImplementation(kotlin("test"))
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
-    }
 }
